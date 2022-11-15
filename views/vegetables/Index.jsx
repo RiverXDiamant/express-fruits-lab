@@ -7,16 +7,16 @@ class Index extends React.Component {
                 <h1>Vegetables Index Page</h1>
                 <ul>
                 {
-                    fruits.map((vegetables, i) => {
+                    vegetables.map((vegetable, i) => {
                         return (
-                            // anchor tag to take us to each index vegetable page
+                            // anchor tag to take us to each index vegetables page
                             <li>
                                 The{' '}
                             
-                                <a href={`/vegetables/${i}`}>{vegetables.name}</a>
-                                {' '} is {vegetables.color} <br></br>
+                                <a href={`/vegetables/${i}`}>{vegetable.name}</a>
+                                {' '} is {vegetable.color} <br></br>
                                 {
-                                    vegetables.readyToEat
+                                    vegetable.readyToEat
                                     ? "It's ready to eat! Nom Nom Nom!"
                                     : "It is not ready to eat... don't touch."
                                 }
