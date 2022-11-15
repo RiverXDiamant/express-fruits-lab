@@ -5,7 +5,7 @@ const vegetables = [
     readyToEat: false,
   },
   {
-    name: "Carrots",
+    name: "Carrot",
     color: "orange",
     readyToEat: true,
   },
@@ -20,7 +20,7 @@ const vegetables = [
     readyToEat: true,
   },
   {
-    name: "Navy Beans",
+    name: "Navy Bean",
     color: "white",
     readyToEat: false,
   },

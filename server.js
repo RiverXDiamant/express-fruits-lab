@@ -32,7 +32,7 @@ app.get("/fruits/:indexOfFruit", (req, res) => {
 
 // ===== VEGETABLES ===== \\
 
-app.get("/vegetables", (req, res) => {
+app.get("/vegetables/Index", (req, res) => {
   res.render("/vegetables/Index", { vegetables: vegetables });
 });
 
