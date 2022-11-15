@@ -1,4 +1,4 @@
-# express-vegetables-lab
+# Express Vegetables Lab
 Practice for: CRUD, MVC, REST, INDUCES and JSX
 
 Practice What You Learned
