@@ -1,29 +1,18 @@
-const vegetables = [
-  {
-    name: "Sweet Potato",
-    color: "orange brown",
-    readyToEat: false,
-  },
-  {
-    name: "Carrot",
-    color: "orange",
-    readyToEat: true,
-  },
-  {
-    name: "Celery",
-    color: "green",
-    readyToEat: true,
-  },
-  {
-    name: "Cucumber",
-    color: "green",
-    readyToEat: true,
-  },
-  {
-    name: "Navy Bean",
-    color: "white",
-    readyToEat: false,
-  },
-];
+const mongoose = require("mongoose");
 
-module.exports = vegetables;
+const vegetableSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    color: { type: String, required: true },
+    readyToEat: Boolean,
+  },
+  {
+    timestamps: true,
+  }
+);
+
+// All - model names - should be capitalized
+// Vegetable model
+const Vegetable = mongoose.model("Vegetable", vegetableSchema);
+
+module.exports = Vegetable;

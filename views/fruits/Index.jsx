@@ -6,7 +6,7 @@ class Index extends React.Component {
             <div>
                 <h1>Fruits Index Page</h1>
                 <nav>
-                    <a href="/fruits/new">Create Fruit Page</a>
+                    <a href="/fruits/new">Create Fruit</a>
                 </nav>
                 <ul>
                 {
@@ -16,7 +16,7 @@ class Index extends React.Component {
                             <li>
                                 The{' '}
                             
-                                <a href={`/fruits/${i}`}>{fruit.name}</a>
+                                <a href={`/fruits/${ fruit.id }`}> { fruit.name } </a>
                                 {' '} is {fruit.color} <br></br>
                                 {
                                     fruit.readyToEat

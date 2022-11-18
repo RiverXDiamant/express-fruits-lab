@@ -6,7 +6,7 @@ class Show extends React.Component {
     render () {
         // make variable to grab data
         // destructuring from an object
-        const {name, color, readyToEat} = this.props
+        const {name, color, readyToEat} = this.props.fruit
         // console.log(this.props)
      return (
         //start writing JSX here
