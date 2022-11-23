@@ -1,6 +1,7 @@
 
 // react components
 const React = require('react') // react package
+const DefaultLayout = require("../layout/Default")
 
 class Show extends React.Component {
     render () {
@@ -11,12 +12,16 @@ class Show extends React.Component {
      return (
         //start writing JSX here
         // can only have 1 parent element but unlimited nested elements
-        <div>
-            <h1> Show Page </h1>
+        <DefaultLayout title={`${name} Show Page`}>
+            {/* <h1> Show Page </h1> */}
+            <nav>
+                    <a href="/fruits">Home</a>
+                </nav>
             <div>
-                <p>The {name} is {color}.</p>{readyToEat ? " It's ready to eat" : "It is not ready to eat... don't touch that"}
+                <p>The {name} is {color}.</p>
+                {readyToEat ? " It's ready to eat! Nom Nom Nom!" : "It is not ready to eat... don't touch that"}
             </div>
-       </div>
+       </DefaultLayout>
 
       );
      }
