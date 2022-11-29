@@ -36,7 +36,7 @@ app.engine("jsx", reactViews.createEngine());
 // optional way
 // app.engine("jsx", require("express-react-views").createEngine());
 
-// == Middleware - running in the middle of the request and respond cycle
+// * == Middleware - running in the middle of the request and respond cycle
 // you have to call - next - in order to continue the req,res cycle
 
 app.use((req, res, next) => {
@@ -52,6 +52,7 @@ app.use(express.urlencoded({ extended: false }));
 //after app has been defined
 //use methodOverride.  We'll be adding a query parameter to our delete form named _method
 app.use(methodOverride("_method"));
+app.use(express.static("public"));
 
 // ===== Routes =====
 app.use("/fruits", fruitsController);
@@ -116,5 +117,5 @@ app.get("/vegetables/:id", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Listening on port: ${PORT}`);
+  console.log(`Listening on port: ${PORT} 🕿`);
 });
